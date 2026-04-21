@@ -30,7 +30,7 @@ export default function ComingSoon() {
       {/* Mobile Banner (1080 x 1920) */}
       <div className="block md:hidden relative w-full h-screen animate-fadeIn">
         <Image
-          src="/home/mobile-banner.png"
+          src="/home/banner.png"
           alt="Jain Mandir Event Main Banner Mobile"
           fill
           className="object-contain"
