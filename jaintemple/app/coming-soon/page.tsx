@@ -4,39 +4,44 @@ import Image from "next/image";
 
 export default function ComingSoon() {
   return (
-    <div className="w-full bg-[#0a0a0a]">
-      {/* Large Desktop Banner (3780 x 1890) */}
-      <div className="hidden lg:block relative w-full h-screen animate-fadeIn">
+    <div className="w-full min-h-screen bg-[#0a0a0a]">
+
+      {/* Large Desktop Banner (≥1024px) */}
+      <div className="hidden lg:block w-full">
         <Image
-          src="/home/laptop-banner.png"
+          src="/home/laptop-banner.jpeg"
           alt="Jain Mandir Event Main Banner Large"
-          fill
-          className="object-cover"
+          width={3780}
+          height={1890}
+          className="w-full h-auto block"
           priority
         />
       </div>
 
-      {/* Standard Desktop/Tablet Banner (1920 x 1080) */}
-      <div className="hidden md:block lg:hidden relative w-full h-screen animate-fadeIn">
+      {/* Tablet Banner (768px – 1023px) */}
+      <div className="hidden md:block lg:hidden w-full">
         <Image
-          src="/home/tab-banner.png"
+          src="/home/tab-banner.jpeg"
           alt="Jain Mandir Event Main Banner Standard"
-          fill
-          className="object-cover"
+          width={1920}
+          height={1080}
+          className="w-full h-auto block"
           priority
         />
       </div>
 
-      {/* Mobile Banner (1080 x 1920) */}
-      <div className="block md:hidden relative w-full h-screen animate-fadeIn">
+      {/* Mobile Banner (<768px) */}
+      <div className="block md:hidden w-full">
         <Image
-          src="/home/banner.png"
+          src="/home/mobile-banner.jpeg"
           alt="Jain Mandir Event Main Banner Mobile"
-          fill
-          className="object-contain"
+          width={1080}
+          height={1920}
+          className="w-full h-auto block"
           priority
         />
       </div>
+
     </div>
   );
 }
